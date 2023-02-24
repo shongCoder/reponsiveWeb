@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/lightgallery.css">
 
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article" />
@@ -263,17 +264,35 @@
                     </article>
                     <!-- //col4 -->
                     <article class="column col5">
-                        <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이 곳은 설명 부분입니다</p>
-                        <!-- -->
-                        <!-- // -->
+                        <h4 class="col_tit">Blend Effect</h4>
+                        <p class="col_desc">background-blend-mode와 mix-blend-mode</p>
+                        <!-- 라이트박스 -->
+                        <div class="lightbox square clearfix">
+                            <a href="img/light01_s.jpg"><img src="img/light01.jpg" alt="이미지"><em>blur</em></a>
+                            <a href="img/light02_s.jpg"><img src="img/light02.jpg" alt="이미지"><em>brightness</em></a>
+                            <a href="img/light03_s.jpg"><img src="img/light03.jpg" alt="이미지"><em>contrast</em></a>
+                            <a href="img/light04_s.jpg"><img src="img/light04.jpg" alt="이미지"><em>grayscale</em></a>
+                            <a href="img/light05_s.jpg"><img src="img/light05.jpg" alt="이미지"><em>hur-rotate</em></a>
+                            <a href="img/light06_s.jpg"><img src="img/light06.jpg" alt="이미지"><em>invert</em></a>
+                            <a href="img/light07_s.jpg"><img src="img/light07.jpg" alt="이미지"><em>opacity</em></a>
+                            <a href="img/light08_s.jpg"><img src="img/light08.jpg" alt="이미지"><em>saturate</em></a>
+                            <a href="img/light09_s.jpg"><img src="img/light09.jpg" alt="이미지"><em>sepia</em></a>
+                            <a href="img/light10_s.jpg"><img src="img/light10.jpg" alt="이미지"><em>mix</em></a>
+                        </div>
+                        <!-- //라이트박스 -->
                     </article>
                     <!-- //col5 -->
                     <article class="column col6">
-                        <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이 곳은 설명 부분입니다</p>
-                        <!-- -->
-                        <!-- // -->
+                        <h4 class="col_tit">Video</h4>
+                        <p class="col_desc">비디오 영역입니다.</p>
+                        <!-- 비디오 -->
+                        <!-- <video autoplay="autoplay" controls="controls" loof="loof">
+                            <source src="img/video.mp4" type="video/mp4">
+                        </video> -->
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/09xntNW45lg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <!-- //비디오 -->
                     </article>
                     <!-- //col6 -->
                 </section>
@@ -317,7 +336,13 @@
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/modernizr-custom.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/lightgallery.min.js"></script>
     <script>
+        //라이트박스
+        $(".lightbox").lightGallery({
+
+        });
+
         //이미지 슬라이더
         $(".slider").slick({
             dots: true,
