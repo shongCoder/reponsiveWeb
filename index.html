@@ -299,24 +299,39 @@
                 <section id="cont_right">
                     <h3 class="ir_su">반응형 사이트 오른쪽 컨텐츠</h3>
                     <article class="column col7">
-                        <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이 곳은 설명 부분입니다</p>
-                        <!-- -->
-                        <!-- // -->
+                        <h4 class="col_tit">Effect01</h4>
+                        <p class="col_desc">CSS의 transform을 이용한 마우스오버 효과</p>
+                        <!-- side1 -->
+                        <div class="side1">
+                            <figure>
+                                <img src="img/side1.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- //side1 -->
                     </article>
                     <!-- //col7 -->
                     <article class="column col8">
-                        <h4 class="col_tit">Title</h4>
+                        <h4 class="col_tit">Effect02</h4>
                         <p class="col_desc">이 곳은 설명 부분입니다</p>
-                        <!-- -->
-                        <!-- // -->
+                        <!-- side2 -->
+                        <div class="side2">
+                            <figure>
+                                <img src="img/side2.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- //side2 -->
                     </article>
                     <!-- //col8 -->
                     <article class="column col9">
-                        <h4 class="col_tit">Title</h4>
+                        <h4 class="col_tit">Effect03</h4>
                         <p class="col_desc">이 곳은 설명 부분입니다</p>
-                        <!-- -->
-                        <!-- // -->
+                        <!-- side3 -->
+                        <div class="side3">
+                            <figure>
+                                <img src="img/side3.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- //side3 -->
                     </article>
                     <!-- //col9 -->
                 </section>
@@ -326,7 +341,24 @@
     </main>
     <footer id="footer">
         <div class="container">
-            <h2>반응형 사이트 푸터</h2>
+            <div class="row">
+                <div class="footer">
+                    <ul>
+                        <li><a href="#">사이트 도움말</a></li>
+                        <li><a href="#">사이트 이용약관</a></li>
+                        <li><a href="#">사이트 운영원칙</a></li>
+                        <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+                        <li><a href="#">책임의 한계와 법적고지</a></li>
+                        <li><a href="#">게시중단요청서비스</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <address>
+                        Copyright ©
+                        <a href="http://webstoryboy.co.kr"><strong>webstoryboy</strong></a>
+                        All Rights Reserved.
+                    </address>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- 푸터 -->
@@ -338,9 +370,34 @@
     <script src="js/slick.min.js"></script>
     <script src="js/lightgallery.min.js"></script>
     <script>
+        //접기 펼치기
+        $(".btn").click(function(e){
+            e.preventDefault();
+            $(".nav").slideToggle();
+            $(".btn").toggleClass("open");
+
+            if($(".btn").hasClass("open")){
+                //open 이 있을 때
+                $(".btn").find("i").attr("class", "fa fa-angle-up");
+            } else {
+                //opem 이 없을 때
+                $(".btn").find("i").attr("class", "fa fa-angle-down");
+            }
+        });
+
+        $(window).resize(function(){
+            var wWidth = $(window).width();
+            if(wWidth > 600){
+                $(".nav").removeAttr("style");
+            }
+        });
+
+        
         //라이트박스
         $(".lightbox").lightGallery({
-
+            autoplay: true,
+            pause: 3000,
+            progressBar: true
         });
 
         //이미지 슬라이더

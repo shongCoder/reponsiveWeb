@@ -615,6 +615,33 @@ body{
     height: 100%;
 }
 
+/* 푸터 */
+.footer{
+text-align: center;
+padding: 30px 50px;
+}
+.footer li{
+    display: inline;
+    padding: 0 7px 0 10px;
+    white-space: nowrap;
+    position: relative;
+}
+.footer address{
+    padding-top: 15px;
+}
+.footer li::before{
+    content: '';
+    width: 1px;
+    height: 12px;
+    background: #dbdbdb;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.footer li:first-child::before{
+    width: 0;
+}
+
 
 /* 미디어쿼리 */
 
@@ -683,6 +710,24 @@ body{
         margin-right: 0;
         border-right: 0;
     }
+
+    #cont_right{
+        overflow: hidden;
+    }
+    #cont_right .column{
+        float: left;
+        width: 33.3333%;
+        box-sizing: border-box;
+    }
+    #cont_right .column.col7{
+        border-right: 1px solid #dbdbdb;
+        border-bottom: 0;
+    }
+    #cont_right .column.col8{
+        border-right: 1px solid #dbdbdb;
+        border-bottom: 0;
+    }
+
 }
 
 /* 화면 너비 0 ~ 768px */
@@ -759,6 +804,16 @@ body{
         border-top: 1px solid #dbdbdb;
     }
 
+    #cont_right .column{
+        width: 50%;
+    }
+    #cont_right .column.col9{
+        display: none;
+    }
+    #cont_right .column.col8{
+        border-right: 0;
+    }
+
     .slider figcaption{
         padding: 10px;
     }
@@ -791,6 +846,18 @@ body{
     .nav > div:last-child li{
         width: 100%;
     }
+
+    #cont_right .column{
+        width: 100%;
+    }
+    #cont_right .column.col7{
+        border-right: 0;
+        border-bottom: 1px solid #dbdbdb;
+    }
+    #cont_right .column.col9{
+        display: block;
+    }
+
     .square a{
         width: 100%;
         margin-right: 0;
